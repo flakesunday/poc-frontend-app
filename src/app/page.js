@@ -42,13 +42,13 @@ export default function Home() {
       data: tranFormObjectToFormData(customerValue),
     });
 
-    // axios({
-    //   method: "post",
-    //   maxBodyLength: Infinity,
-    //   url: `${apiUrl}/api/product/createProduct`,
-    //   data: tranFormObjectToFormData(productValue),
-    //   headers: { "Content-Type": "multipart/form-data" },
-    // });
+    axios({
+      method: "post",
+      maxBodyLength: Infinity,
+      url: `${apiUrl}/api/product/createProduct`,
+      data: tranFormObjectToFormData(productValue),
+      headers: { "Content-Type": "multipart/form-data" },
+    });
   };
   // React.useEffect(() => {
   //   const apiUrl = "http://localhost:8000";
@@ -132,7 +132,7 @@ export default function Home() {
               />
             </div>
           </div>
-          {/* <div className="mt-[20px]">
+          <div className="mt-[20px]">
             <h1>Product</h1>
             <div>
               <h3>product_code</h3>
@@ -197,7 +197,7 @@ export default function Home() {
                 multiple
               />
             </div>
-          </div> */}
+          </div>
 
           <input type="submit" />
         </div>
